@@ -128,39 +128,64 @@ Follow these instructions to run the backend locally for development and testing
    ```bash
    git clone https://github.com/akirachix/kukukonnect-backend.git
    cd kukukonnect-backend
-   
-2. Create and activate a virtual environment
 
+```
+
+2. **Create and activate a virtual environment**
+```bash
 python -m venv kukuenv
 
-macOS/Linux
+```
 
+
+**macOS/Linux**
+```bash
 source kukuenv/bin/activate
 
-Windows
+```
 
+
+**Windows**
+```powershell
 kukuenv\Scripts\activate
 
-Install dependencies
+```
 
+
+3. **Install dependencies**
+```bash
 pip install -r requirements.txt
 
-Configure environment variables
+```
 
-Create a .env file containing the required application configuration.
 
-Apply database migrations
-
+4. **Configure environment variables**
+Create a `.env` file containing the required application configuration.
+5. **Apply database migrations**
+```bash
 python manage.py migrate
 
-Run the development server
+```
 
+
+6. **Run the development server**
+```bash
 python manage.py runserver
+
+```
+
+
 
 The backend will then be available locally at:
 
-http://127.0.0.1:8000/
-Project Structure
+```text
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+```
+
+## Project Structure
+
+```text
 kukukonnect-backend/
 ├── api/
 ├── devices/
@@ -170,3 +195,9 @@ kukukonnect-backend/
 ├── manage.py
 ├── requirements.txt
 └── README.md
+
+```
+
+```
+
+```
