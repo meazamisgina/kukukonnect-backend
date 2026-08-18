@@ -1,64 +1,172 @@
+# KukuKonnect
 
-# 
-## Overview
-KukuKonnect is an IoT-based poultry monitoring platform that addresses thermal stress in chickens for Kenyan farmers by monitoring and regulating temperature and humidity in coops. By connecting farmers with IoT devices, KukuKonnect ensures optimal coop conditions through real-time data and automated controls. The platform supports two main user types—farmers and agrovets—and provides a robust, scalable backend with a well-defined database schema to manage users, devices, environmental data, automation settings, and threshold updates.
+KukuKonnect is a real-time IoT platform designed to help poultry farmers monitor and manage environmental conditions inside chicken coops.
 
-## Features
-* **User Management:** Secure registration and authentication for farmers and agrovets, with automated email notifications for farmer account creation.
-**Device and Data Directory:** Comprehensive database of IoT devices, their settings (e.g., temperature/humidity thresholds).
-* **Environmental Monitoring:** Real-time tracking of temperature and humidity data from coops.
-* **Automation Control:** Automatic activation of fans or heaters based on default or user-defined thresholds.
-* **Scalable Architecture:** Modular Django-based backend for easy integration and maintenance.
-* **Secure Data Handling:** Robust authentication and data encryption to protect sensitive user and device information.
+The system connects ESP32-based sensors with a Django backend to collect temperature and humidity data, while configurable thresholds can trigger automated climate-control responses such as activating heaters or fans.
 
-# Technology Stack
-* **Python 3.13+:** Modern Python for reliable development.
-* **Django 4.2+:** A high-level web framework for rapid development.
-* **Django REST Framework:** For building secure and scalable APIs.
-* **PostgreSQL:** A robust relational database for managing healthcare data.
-* **drf-yasg:** Generates interactive Swagger documentation.
-* **Token Authentication:** Secure access to APIs and user sessions.
-## Getting Started
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
-### Prerequisites
-*   Python 3.10
-*   pip
-*   virtualenv
-### Installation
-1.  **Clone the repository:**
-    ```sh
-    git clone git@github.com:akirachix/kukukonnect-backend.git
-    cd kukukonnect-backend
-    ```
-2.  **Create and activate a virtual environment:**
-    ```sh
-    python -m venv kukuenv
-    source kukuenv/bin/activate
-    ```
-3.  **Install the dependencies:**
-    ```sh
-    pip install -r requirements.txt
-    ```
-4.  **Apply database migrations:**
-    ```sh
-    python manage.py migrate
-    ```
-5.  **Run the development server:**
-    ```sh
-    python manage.py runserver
-    ```
-The API will be available at `https://kukukonnect-6aa0bdb81a64.herokuapp.com/api/`.
+The platform combines IoT hardware, MQTT communication, backend APIs, persistent data storage, real-time monitoring, and automated environmental control.
+
+## Key Features
+
+- **Real-Time Environmental Monitoring** — Collects temperature and humidity readings from poultry coops.
+- **Automated Climate Control** — Triggers configured heater or fan responses when environmental conditions cross defined thresholds.
+- **IoT Device Management** — Manages connected ESP32 devices and their configuration.
+- **MQTT Communication** — Provides communication between the IoT hardware and application services.
+- **Real-Time Updates** — Streams current environmental readings to the monitoring interface.
+- **Configurable Thresholds** — Supports adjustable temperature and humidity thresholds.
+- **User Management** — Supports authenticated farmer and agrovet workflows.
+- **REST APIs** — Provides APIs for users, devices, sensor readings, thresholds, and automation settings.
+
+## System Architecture
+
+The system combines on-farm sensing and control hardware with a cloud-backed application layer and a real-time monitoring interface.
+<img width="1902" height="1054" alt="image" src="https://github.com/user-attachments/assets/55735217-ac7a-4239-a6af-13fe304024c1" />
+
+The architecture consists of three main layers:
+
+- **On-Farm Hardware** — DHT22 environmental sensors and ESP32-based control hardware connected to the physical coop.
+- **Application Layer** — Django REST APIs, PostgreSQL, and MQTT/HiveMQ communication services.
+- **User Interface** — A web/PWA monitoring interface for farmers and agrovets.
+
+The system uses MQTT for IoT communication and real-time application mechanisms to deliver current environmental readings to the monitoring interface.
+
+## How It Works
+
+1. ESP32 hardware collects temperature and humidity readings from the coop.
+2. Sensor data is communicated through MQTT/HiveMQ.
+3. Application services receive and process the environmental data.
+4. Environmental readings and device configuration are stored in PostgreSQL.
+5. Configured temperature and humidity thresholds are evaluated.
+6. When environmental conditions cross configured thresholds, the system can trigger the appropriate climate-control response.
+7. Current readings are delivered to the monitoring interface in real time.
+8. Farmers can monitor coop conditions and manage configured environmental thresholds through the application.
+
+## Technology Stack
+
+### Backend
+
+- Python
+- Django
+- Django REST Framework
+- PostgreSQL
+- JWT Authentication
+- OpenAPI / drf-spectacular
+
+### IoT & Real-Time Communication
+
+- ESP32
+- DHT22
+- MQTT
+- HiveMQ
+- WebSockets
+
+### Frontend
+
+- Next.js
+- React.js
+- Progressive Web App (PWA)
+
+### Development & Deployment
+
+- Docker
+- Gunicorn
+- Heroku
+- Git
+
+## Data Model
+
+The backend uses PostgreSQL to manage the core entities required by the platform, including:
+
+- Users
+- IoT devices
+- Environmental readings
+- Device configuration
+- Temperature and humidity thresholds
+- Automation settings
+
+The API layer exposes these resources through Django REST Framework with authenticated access to application workflows.
+
 ## API Documentation
-API documentation is available through Swagger UI and ReDoc.
-*   **Swagger UI:** `https://kukukonnect-6aa0bdb81a64.herokuapp.com/api/schema/swagger-ui/`
-*   **ReDoc:** `https://kukukonnect-6aa0bdb81a64.herokuapp.com/api/schema/redoc/`
-## Usage
 
+The backend uses `drf-spectacular` to generate OpenAPI documentation.
 
+When running the application locally, API documentation can be accessed through the generated Swagger UI and ReDoc interfaces.
 
+## MVP Demonstration
 
+A recorded MVP demonstration shows the physical IoT setup and environmental monitoring workflow, including the coop hardware and automated climate-control system.
 
+[Watch the MVP demonstration](https://drive.google.com/file/d/1Yp5naPuyF-sR_srePZohRImCHGOM9oEI/view?usp=sharing)
 
+## Screenshots
 
+### Physical Prototype
 
+![KukuKonnect physical prototype](docs/images/prototype.jpg)
 
+### Monitoring Interface
+
+![KukuKonnect monitoring dashboard](docs/images/dashboard.png)
+
+## Getting Started
+
+Follow these instructions to run the backend locally for development and testing.
+
+### Prerequisites
+
+- Python 3.10+
+- pip
+- virtualenv
+- PostgreSQL
+- MQTT broker
+- Git
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/akirachix/kukukonnect-backend.git
+   cd kukukonnect-backend
+   
+2. Create and activate a virtual environment
+
+python -m venv kukuenv
+
+macOS/Linux
+
+source kukuenv/bin/activate
+
+Windows
+
+kukuenv\Scripts\activate
+
+Install dependencies
+
+pip install -r requirements.txt
+
+Configure environment variables
+
+Create a .env file containing the required application configuration.
+
+Apply database migrations
+
+python manage.py migrate
+
+Run the development server
+
+python manage.py runserver
+
+The backend will then be available locally at:
+
+http://127.0.0.1:8000/
+Project Structure
+kukukonnect-backend/
+├── api/
+├── devices/
+├── sensors/
+├── users/
+├── kukukonnect/
+├── manage.py
+├── requirements.txt
+└── README.md
