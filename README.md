@@ -112,6 +112,8 @@ A recorded MVP demonstration shows the physical IoT setup and environmental moni
 ### Monitoring Interface
 
 <img width="1840" height="1014" alt="image" src="https://github.com/user-attachments/assets/62eb6744-9131-470d-9ed6-d0ca460b0d4c" />
+<img width="1920" height="949" alt="image" src="https://github.com/user-attachments/assets/0ede0dd5-9cf3-48aa-968b-581d6ab9a94a" />
+![Uploading image.png…]()
 
 
 ## Getting Started
