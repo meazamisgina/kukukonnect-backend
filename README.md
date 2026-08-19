@@ -102,11 +102,17 @@ A recorded MVP demonstration shows the physical IoT setup and environmental moni
 
 ### Physical Prototype
 
-![KukuKonnect physical prototype](docs/images/prototype.jpg)
+<img width="1280" height="896" alt="image" src="https://github.com/user-attachments/assets/ce6b2f03-0cfe-4663-96fa-f59df33b8506" />
+<img width="1564" height="808" alt="image" src="https://github.com/user-attachments/assets/82c05b4f-3017-4898-b29f-c551a723559f" />
+<img width="1583" height="774" alt="image" src="https://github.com/user-attachments/assets/ef0cd12c-d95a-4826-9cb9-09175bf62af4" />
+<img width="1580" height="765" alt="image" src="https://github.com/user-attachments/assets/00dce115-993f-4a79-ac10-ca75bc567047" />
+<img width="1257" height="784" alt="image" src="https://github.com/user-attachments/assets/dc5df5c9-79c2-4c61-937e-aebc2367557e" />
+<img width="779" height="568" alt="image" src="https://github.com/user-attachments/assets/7bb74b9a-e145-497f-aa6a-731d8695b9f1" />
 
 ### Monitoring Interface
 
-![KukuKonnect monitoring dashboard](docs/images/dashboard.png)
+<img width="1840" height="1014" alt="image" src="https://github.com/user-attachments/assets/62eb6744-9131-470d-9ed6-d0ca460b0d4c" />
+
 
 ## Getting Started
 
@@ -125,9 +131,9 @@ Follow these instructions to run the backend locally for development and testing
 
 1. **Clone the repository**
 
-   ```bash
-   git clone https://github.com/akirachix/kukukonnect-backend.git
-   cd kukukonnect-backend
+```bash
+git clone https://github.com/akirachix/kukukonnect-backend.git
+cd kukukonnect-backend
 
    
 2. **Create and activate a virtual environment**
@@ -192,7 +198,3 @@ kukukonnect-backend/
 ├── manage.py
 ├── requirements.txt
 └── README.md
-
-```
-
-```
