@@ -8,14 +8,14 @@ The platform combines IoT hardware, MQTT communication, backend APIs, persistent
 
 ## Key Features
 
-- **Real-Time Environmental Monitoring** — Collects temperature and humidity readings from poultry coops.
-- **Automated Climate Control** — Triggers configured heater or fan responses when environmental conditions cross defined thresholds.
-- **IoT Device Management** — Manages connected ESP32 devices and their configuration.
-- **MQTT Communication** — Provides communication between the IoT hardware and application services.
-- **Real-Time Updates** — Streams current environmental readings to the monitoring interface.
-- **Configurable Thresholds** — Supports adjustable temperature and humidity thresholds.
-- **User Management** — Supports authenticated farmer and agrovet workflows.
-- **REST APIs** — Provides APIs for users, devices, sensor readings, thresholds, and automation settings.
+- **Real-Time Environmental Monitoring** - Collects temperature and humidity readings from poultry coops.
+- **Automated Climate Control** - Triggers configured heater or fan responses when environmental conditions cross defined thresholds.
+- **IoT Device Management** - Manages connected ESP32 devices and their configuration.
+- **MQTT Communication** - Provides communication between the IoT hardware and application services.
+- **Real-Time Updates** - Streams current environmental readings to the monitoring interface.
+- **Configurable Thresholds** - Supports adjustable temperature and humidity thresholds.
+- **User Management** - Supports authenticated farmer and agrovet workflows.
+- **REST APIs** - Provides APIs for users, devices, sensor readings, thresholds, and automation settings.
 
 ## System Architecture
 
@@ -24,9 +24,9 @@ The system combines on-farm sensing and control hardware with a cloud-backed app
 
 The architecture consists of three main layers:
 
-- **On-Farm Hardware** — DHT22 environmental sensors and ESP32-based control hardware connected to the physical coop.
-- **Application Layer** — Django REST APIs, PostgreSQL, and MQTT/HiveMQ communication services.
-- **User Interface** — A web/PWA monitoring interface for farmers and agrovets.
+- **On-Farm Hardware** - DHT22 environmental sensors and ESP32-based control hardware connected to the physical coop.
+- **Application Layer** - Django REST APIs, PostgreSQL, and MQTT/HiveMQ communication services.
+- **User Interface** - A web/PWA monitoring interface for farmers and agrovets.
 
 The system uses MQTT for IoT communication and real-time application mechanisms to deliver current environmental readings to the monitoring interface.
 
