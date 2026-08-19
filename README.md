@@ -132,11 +132,10 @@ Follow these instructions to run the backend locally for development and testing
 ### Installation
 
 1. **Clone the repository**
-
 ```bash
 git clone https://github.com/akirachix/kukukonnect-backend.git
 cd kukukonnect-backend
-
+```
    
 2. **Create and activate a virtual environment**
 ```
@@ -144,9 +143,8 @@ python -m venv kukuenv
 ```
 
 **macOS/Linux**
-```bash
+```
 source kukuenv/bin/activate
-
 ```
 
 
@@ -185,7 +183,6 @@ The backend will then be available locally at:
 
 ```text
 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
-
 ```
 
 ## Project Structure
